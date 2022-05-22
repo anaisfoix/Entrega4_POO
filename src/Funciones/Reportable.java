@@ -12,4 +12,5 @@ public interface Reportable {
     public void GenerarReporteCurso();
     public void GenerarReporteProfesor();
     public void GenerarReporteEstudiante();
+    public int Menu();
 }

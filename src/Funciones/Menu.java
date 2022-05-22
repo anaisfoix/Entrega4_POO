@@ -3,7 +3,7 @@ package Funciones;
 import Funciones.Funciones;
 import java.util.Scanner;
 
-public class Menu {
+public class Menu implements Reportable{
     public int Menu(){
         /*Se debe hacer un menu ́ para el sistema con las siguientes funcionalidades: (1) 
         Agregar (Create Elemento (s)), (2)
@@ -68,5 +68,20 @@ public class Menu {
             System.out.println("OPCIÓN INCORRECTA");
         }
         return 13;
+    }
+
+    @Override
+    public void GenerarReporteCurso() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void GenerarReporteProfesor() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void GenerarReporteEstudiante() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
