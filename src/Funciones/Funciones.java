@@ -667,5 +667,35 @@ public class Funciones implements Reportable {
             e.printStackTrace();
         }
     }
-
+    
+    public void MostrarAlumnoConCursosEntreNyM(){
+        Scanner Entrada = new Scanner (System.in);
+        System.out.println("Ingrese un número para empezar el rango de números que abarcará la variable 'n': ");
+        int n = Entrada.nextInt();
+        System.out.println("Ingrese un número para terminar el rango de números que abarcará la variable 'm' (que sea mayor que 'n'): ");
+        int m = Entrada.nextInt();
+        for (int i = 0; i < this.Estudiantes.size(); i++){
+            if ((this.Estudiantes.get(i).getCursosMatriculados().size() >= n) && (this.Estudiantes.get(i).getCursosMatriculados().size() <= m)){
+                System.out.println("El estudiante " + this.Estudiantes.get(i).getNombre() + " " + this.Estudiantes.get(i).getApellido() + " tiene " + this.Estudiantes.get(i).getCursosMatriculados().size() + " cursos matriculados");
+            }
+        }
+    }
+ 
+    public void MostrarProfesorMasCursos(){
+        int i, j, masCursos = 0, indiceProfesorMasCursos = 0;
+        for(i = 0; i < this.Profesores.size(); i++){
+            if (masCursos < this.Profesores.get(i).getSize()){
+                masCursos = this.Profesores.get(i).getSize();
+                indiceProfesorMasCursos = i;
+        }
+        System.out.println("El profesor con más cursos es:");
+        System.out.println("Nombre Profesor: "+this.Profesores.get(indiceProfesorMasCursos));
+        System.out.println("Con la cantidad de " + masCursos + " cursos");
+        System.out.println("Los cuales son:");
+        for (i = 0; i < this.Profesores.get(indiceProfesorMasCursos).getCursos(i).length(); i++){
+            // no sé cómo imprimir los cursos del profesor
+            System.out.println((i+1) + ") "+this.Profesores.get(indiceProfesorMasCursos).getCursos(i));
+        }
+        }
+    }
 }
